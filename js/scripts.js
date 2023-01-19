@@ -18,6 +18,12 @@ function prntsc() {
     console.log(link);
 }
 
+function randomString() {
+    var letters = "abcdefghijklmnopqrstuvwxyz";
+    var numbers = "0123456789";
+    var randomCode = letters.charAt(Math.floor(Math.random() * letters.length)) + letters.charAt(Math.floor(Math.random() * letters.length)) + numbers.charAt(Math.floor(Math.random() * numbers.length)) + numbers.charAt(Math.floor(Math.random() * numbers.length)) + numbers.charAt(Math.floor(Math.random() * numbers.length)) + numbers.charAt(Math.floor(Math.random() * numbers.length));
+    window.open("https://prnt.sc/" + randomCode, "_blank");
+  }
 
 //Google Analytics
 window.dataLayer = window.dataLayer || [];
