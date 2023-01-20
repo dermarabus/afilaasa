@@ -18,12 +18,18 @@ function prntsc() {
     console.log(link);
 }
 
-function randomString() {
-    var letters = "abcdefghijklmnopqrstuvwxyz";
-    var numbers = "0123456789";
-    var randomCode = letters.charAt(Math.floor(Math.random() * letters.length)) + letters.charAt(Math.floor(Math.random() * letters.length)) + numbers.charAt(Math.floor(Math.random() * numbers.length)) + numbers.charAt(Math.floor(Math.random() * numbers.length)) + numbers.charAt(Math.floor(Math.random() * numbers.length)) + numbers.charAt(Math.floor(Math.random() * numbers.length));
-    window.open("https://prnt.sc/" + randomCode, "_blank");
-  }
+ function generateCode() {
+        var letters = "abcdefghijklmnopqrstuvwxyz";
+        var randomLetter1 = letters.charAt(Math.floor(Math.random() * letters.length));
+        var randomLetter2 = letters.charAt(Math.floor(Math.random() * letters.length));
+        var randomNumber1 = Math.floor(Math.random() * 10);
+        var randomNumber2 = Math.floor(Math.random() * 10);
+        var randomNumber3 = Math.floor(Math.random() * 10);
+        var randomNumber4 = Math.floor(Math.random() * 10);
+        var code = "prnt.sc/" + randomLetter1 + randomLetter2 + randomNumber1 + randomNumber2 + randomNumber3 + randomNumber4;
+        document.getElementById("code-display").innerHTML = code;
+        window.open("https://prnt.sc/" + code, "_blank");
+      }
 
 //Google Analytics
 window.dataLayer = window.dataLayer || [];
